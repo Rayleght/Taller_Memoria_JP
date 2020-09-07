@@ -44,52 +44,23 @@
 \newpage
 \section{Funcionalidad de la memoria en un computador}\label{intro}
 
+Qué es y qué función tiene la memoria del computador.
 
 \section{Tipos de memoria conocidos} \label{contenido}
-Esta sección es para ver qué pasa con los comandos que definen texto.
-\subsection{Citación}
-Vamos a citar por ejemplo un artículo de \textbf{Albert Einstein} \cite{einstein}.
-También es posible citar libros \cite{dirac} o documentos en línea \cite{knuthwebsite}.\\\\
-Revisar en la última sección el formato de las referencias en IEEE.
 
-\subsection{Incluir código en el documento}
-%
-A continuación, se presenta el código \ref{codigo_ejemplo}, que nos permite incluir en el informe partes de código que requieran una explicación exhaustiva.
-\begin{lstlisting}[language=C++, caption=Ejemplo, label=codigo_ejemplo]
-#include <stdio.h>
-#define N 10
-/* Block
- * comment */
 
-int main()
-{
-    int i;
+\subsection{Memoria Caché (L1, L2, L3)}
+\subsection{Memoria RAM (Random Acces Memory)}
+\subsection{Memoria DRAM (Dynamic RAM)}
+\subsection{Memoria SRAM (Static RAM)}
+\subsection{Memoria virtual}
+\subsection{Disco duro}
 
-    // Line comment.
-    puts("Hello world!");
-    
-    for (i = 0; i < N; i++)
-    {
-        puts("LaTeX is also great for programmers!");
-    }
 
-    return 0;
-}
-\end{lstlisting}
-En la sección \ref{imagenes}, se presentará como añadir ilustraciones al texto.
+\section{Gestión de memoria}
 
-\section{Inclusión de imágenes} \label{imagenes}
+\section{Conclusiones}
 
-En la Figura (\ref{fig:cpplogo}), se presenta el logo de C++ contenido en la carpeta images.
-
-\begin{figure}[h]
-\includegraphics[width=4cm]{cpplogo.png}
-\centering
-\caption{Logo de C++}
-\label{fig:cpplogo}
-\end{figure}
-
-Las secciones (\ref{intro}), (\ref{contenido}) y (\ref{imagenes}) dependen del estilo del documento.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
