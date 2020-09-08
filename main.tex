@@ -44,44 +44,64 @@
 \newpage
 \section{Funcionalidad de la memoria en un computador}\label{intro}
 
-
+\noindent
 El avance tecnológico ha ido fuertemente ligado a la evolución de los dispositivos electrónicos, un ejemplo de estos dispositivos es el computador. El computador es una máquina digital programable con la que el usuario interactúa utilizando una serie de comandos para procesar datos de entrada con el fin de obtener un resultado o información a la salida. La mayoría de las personas que se relacionan con el mundo de la tecnología son capaces de discernir entre el software y el hardware del computador, lo realmente complicado es profundizar en las partes más importante que lo componen. Entre estas partes se encuentra un componente que parece conceptualmente sencillo, pero abarca la mayor diversidad de tipos, tecnología y coste en comparación con los demás componentes del computador. \\
 
+\noindent
 Tal y como se definió el computador es posible hacerse una idea del papel tan primordial que presenta la memoria. Esta, es el dispositivo donde se almacena temporalmente toda la información con la que trabajan los microprocesadores. Se podría decir que la memoria es un intermediario entre la información almacenada en el disco duro y el procesamiento de información que realizan los microprocesadores. Si bien es cierto que el procesador puede utilizar el disco duro como la fuente directa para el procesado, este sería muchísimo más lento, debido principalmente a la distancia que se encuentra del núcleo del microprocesador.
 Una vez el sistema deja de utilizar el contenido extraído del disco duro y almacenado en celdas de memoria más cercanas, se elimina de dichos espacios, de este modo es posible utilizar la capacidad de la memoria en otras instrucciones del procesador y así priorizar la velocidad de ejecución.\\
-
+\noindent
 En resumen, la memoria se utiliza principalmente para agilizar el procesamiento de información en un computador, almacenando el contenido extraído del disco duro con la ayuda del microprocesador hacia un espacio o dirección de memoria más cercano a los núcleos.
 
 
 \section{Tipos de memoria conocidos} \label{contenido}
+\noindent
 La memoria, tal y como se comentó en el punto anterior alberga un sinfín de diseños y arquitecturas. Por esto, los usuarios reducen su clasificación en tres cuestiones: Velocidad, Capacidad y sobretodo coste; todas ligeramente ligadas entre ellas.\\
-
+\noindent
 A continuación se presentan diferentes tipos de memoria, organizadas en cuestión de mayor a menor velocidad y por lo tanto, de menor a mayor capacidad.
 
 \subsection{Memoria ROM (Read Only Memory)}
-
-La memoria ROM o "read only memory" se utiliza únicamente durante el encendido del computador. La característica que mejor la diferencia de las demás es que no presenta información de forma volátil, es decir, nunca se borra el contenido o comandos que se encuentran almacenados en ella. La función que tiene la ROM es la de proporcionar al procesador la instrucción para chequear el funcionamiento de los componentes del sistema
+\noindent
+La memoria ROM o "read only memory" se utiliza únicamente durante el encendido del computador. La característica que mejor la diferencia de las demás es que no presenta información de forma volátil, es decir, nunca se borra el contenido o comandos que se encuentran almacenados en ella. Los comandos más conocidos almacenados en esta memoria son el POST y el BIOS.
+Por un lado, la función del POST (Power On Self Test) es la de proporcionar al procesador la instrucción para chequear el funcionamiento de los componentes del sistema.
+Por el otro, la función del BIOS (Basic Input Output Sistem) hace un chequeo y provee información sobre los dispositivos de almacenamiento con los que cuenta el computador.
 
 \subsection{Memoria Caché (L1, L2, L3)}
-
+\noindent
 La memoria caché se posiciona en el lugar número uno en cuanto a velocidad y cercanía de los núcleos del procesador. El objetivo de la memoria caché es almacenar la información recurrente utilizada por el usuario, con el fin de aumentar la velocidad de la memoria a la hora de procesar los datos ya que se evita ingresar en el contenido del disco duro y de la memoria RAM.\\
-
+\noindent
 La caché se caracteriza por mantener diferentes niveles de memoria: L1, L2, L3.
 L1 es el nivel más rápido y con menor capacidad. La velocidad se debe a su cercanía con el núcleo del procesador ya que se encuentra dentro del mismo.
 L2 sigue siendo una memoria rápida, aunque en menor medida a L1 sí se puede afirmar que presenta una mayor capacidad.
 En L3 se almacena el resto de información "cacheada", tomando la cronología anterior se puede decir que esta memoria es más lenta y tiene mayor capacidad que las dos anteriores.
 
 \subsection{Memoria RAM (Random Acces Memory)}
-
-
+\noindent
+La memoria RAM (Random Acces Memory) como su nombre indica tiene la capacidad de almacenar la información de forma aleatoria, esta capacidad le permite al microprocesador acceder de forma inmediata sin tener que procesar otras celdas vecinas indistintamente de la posición o la dirección. 
+La característica principal es que almacena la información de forma temporal, ya que al apagar o reiniciar el sistema vuelve a "quedarse en blanco".
+Un detalle a tener en cuenta es que cuando deja de utilizase un programa cargado en la memoria RAM, también se borra. El único software que se mantiene siempre funcionando y guardado en la RAM es el sistema operativo.
 
 \subsection{Disco duro}
+\noindent
+El disco duro es la memoria más conocida por todos los consumidores o usuarios de tecnología. Su característica principal es que almacena la información de forma segura, es decir, cuando se reinicia o apaga el computador el contenido de esta no se borra, siempre y cuando se guarde dicho contenido en el disco duro.
+La velocidad de este dispositivo es muy lenta en comparación a las demás memorias, en gran parte se debe a que no se encuentra cerca de los núcleos del procesador y tampoco en la placa madre; Suelen encontrarse de forma externa. Otra diferencia que la caracteriza es su enorme capacidad en comparación a las demás.
+
+\section{Gestión de memoria en un computador}
+\noindent
+Una vez expuestos los tipos de memoria más básicos y conocidos solo queda por entender, qué es lo que controla o gestiona tanta pluralidad en un concepto tan sencillo como la memoria.
+De esta tarea se encarga un controlador de memoria ubicado en un chip en la placa madre o, en los sistemas más modernos, incorporado dentro del microprocesador. Cuando se trata del primer caso, al chip se le conoce como Northbridge o MCH.\\
+
+\noindent
+El controlador de memoria se conecta con la memoria a través del bus, pistas de cobre impresas en la placa madre. Vendrían a ser como los caminos por los que circula la información o el cableado de un circuito analógico.
+Estos caminos, más conocidos como bus, presentan 3 funciones: bus de datos, bus de direcciones y bus de control.
+En el primero se transportar toda la información.
+El segundo remite la dirección de memoria, específicamente, donde se encuentra la información que se va a sobreescribir o se va a leer.
+Finalmente, el bus de control envía las instrucciones que se deben ejecutar en dicho espacio o dirección de memoria. Además establece la frecuencia en la que se relacionan el controlador con la memoria. 
 
 
-\section{Gestión de memoria}
+
 
 \section{Conclusiones}
-
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
